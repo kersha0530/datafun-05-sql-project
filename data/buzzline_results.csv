@@ -1,0 +1,4 @@
+author,message,sentiment
+Alice,Excited to learn SQL!,0.9
+Bob,SQL queries are powerful.,0.7
+Charlie,Not a fan of databases.,-0.4
