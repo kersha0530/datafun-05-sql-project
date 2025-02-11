@@ -12,10 +12,7 @@ This project creates a relational SQLite database for books and authors, demonst
 **DataFun-05-SQL** is a structured SQL-based project designed to demonstrate database creation, schema management, data manipulation, and querying using SQLite and Python. This project involves designing a schema with at least two related tables, inserting records, performing SQL operations, and generating insights using queries. The implementation is carried out through a combination of SQL scripts and Python automation.
 
 
-
-**⚠️ Note:** This project is still under construction. Some features and functionalities may be incomplete or subject to changes.
-
- Summary of Execution Order
+ ## Summary of Execution Order
 1. Drop existing tables:   01_drop_tables.sql
 2. Create schema:   02_create_tables.sql
 3. Insert data:  03_insert_records.sql
@@ -24,7 +21,7 @@ This project creates a relational SQLite database for books and authors, demonst
 6. Run feature script:   db02_features.py
 7. Perform queries:   query_aggregation.sql, query_filter.sql, etc.
 8. Run final query script:   db03_queries.py
-Then verify that the setup is correct by executing SELECT * FROM user; or * FROM messages;SELECT * FROM authors;
+### Then verify that the setup is correct by executing SELECT * FROM user; or * FROM messages;SELECT * FROM authors;
 SELECT * FROM books;, or whatever your table name is, and observe the output.
 
 ## How to Run the Project
@@ -45,7 +42,7 @@ SELECT * FROM books;, or whatever your table name is, and observe the output.
 ### **Step 2: Setup the Database**
 1. Open a terminal and navigate to the project folder:
    ```bash
-   cd path/to/datafun-05-sql
+   cd path/to/datafun-05-sql-projects
    ```
 2. Run the following command to initialize the database:
    ```bash
@@ -70,9 +67,29 @@ SELECT * FROM books;, or whatever your table name is, and observe the output.
   python db03_queries.py
   ```
 
+### Expected Outputs
+#### Table Schema
+##### The database consists of two related tables:
+•	users (stores user details such as name and email)
+•	messages (stores messages, sentiment scores, and category)
 
-## Known Issues and Warnings
-⚠️ **This project is still under construction.**
+
+## Example Query Results
+#### Users Table: 
+•	SELECT * FROM users;
+•	1|Alice Johnson|alice@example.com|2025-02-08 23:36:18
+•	2|Bob Smith|bob@example.com|2025-02-08 23:36:18
+#### Messages Table: 
+•	SELECT * FROM messages;
+•	1|I love Python!|1.0|tech|2025-02-08 23:36:18
+•	2|This new recipe is amazing!|0.8|food|2025-02-08 23:36:18
+#### Joined Data (Users + Messages): 
+•	SELECT users.name, messages.message, messages.sentiment
+•	FROM users
+#### INNER JOIN messages ON users.id = messages.user_id;
+•	Alice Johnson|I love Python!|1.0
+•	Bob Smith|This new recipe is amazing!|0.8
+
 
 ## Contributors
 - **Kersha Broussard**
