@@ -1,10 +1,10 @@
 
-# DataFun-05-SQL
+# Kersha's DataFun-05-SQL-Project
 
-## DataFun-05-SQL Project
+## DataFun-05-SQL-Project
 
 ### Overview
-This project creates a relational SQLite database for books and authors, demonstrating how to:
+This project creates a relational SQLite database for users and messages from buzzline_data.json, demonstrating how to:
 - Create a database schema
 - Load data from CSV files
 - Query and manipulate data with SQL
@@ -70,25 +70,25 @@ SELECT * FROM books;, or whatever your table name is, and observe the output.
 ### Expected Outputs
 #### Table Schema
 ##### The database consists of two related tables:
-•	users (stores user details such as name and email)
-•	messages (stores messages, sentiment scores, and category)
+1.	users (stores user details such as name and email)
+2.	messages (stores messages, sentiment scores, and category)
 
 
 ## Example Query Results
 #### Users Table: 
-•	SELECT * FROM users;
-•	1|Alice Johnson|alice@example.com|2025-02-08 23:36:18
-•	2|Bob Smith|bob@example.com|2025-02-08 23:36:18
+- 	SELECT * FROM users;
+-	1. Alice Johnson|alice@example.com|2025-02-08 23:36:18
+-	2. Bob Smith|bob@example.com|2025-02-08 23:36:18
 #### Messages Table: 
-•	SELECT * FROM messages;
-•	1|I love Python!|1.0|tech|2025-02-08 23:36:18
-•	2|This new recipe is amazing!|0.8|food|2025-02-08 23:36:18
+- 	SELECT * FROM messages;
+-	1. I love Python!|1.0|tech|2025-02-08 23:36:18
+-	2. This new recipe is amazing!|0.8|food|2025-02-08 23:36:18
 #### Joined Data (Users + Messages): 
-•	SELECT users.name, messages.message, messages.sentiment
-•	FROM users
+-	SELECT users.name, messages.message, messages.sentiment
+-	FROM users
 #### INNER JOIN messages ON users.id = messages.user_id;
-•	Alice Johnson|I love Python!|1.0
-•	Bob Smith|This new recipe is amazing!|0.8
+-	Alice Johnson|I love Python!|1.0
+-	Bob Smith|This new recipe is amazing!|0.8
 
 
 ## Contributors
