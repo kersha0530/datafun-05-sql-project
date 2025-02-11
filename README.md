@@ -58,37 +58,34 @@ SELECT * FROM books;, or whatever your table name is, and observe the output.
   ```bash
   python db01_setup.py
   ```
+  ![alt text](image-2.png)
 - **To update or delete records:**
   ```bash
   python db02_features.py
   ```
+  ![alt text](image-1.png)
 - **To run queries and analyze data:**
   ```bash
   python db03_queries.py
   ```
+  ![alt text](image.png)
+
+  ## Query Results
+
+Below are screenshots of the query results:
+
+![Query Results]
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](image-7.png)
 
 ### Expected Outputs
 #### Table Schema
 ##### The database consists of two related tables:
 1.	users (stores user details such as name and email)
 2.	messages (stores messages, sentiment scores, and category)
-
-
-## Example Query Results
-#### Users Table: 
-- 	SELECT * FROM users;
--	1. Alice Johnson|alice@example.com|2025-02-08 23:36:18
--	2. Bob Smith|bob@example.com|2025-02-08 23:36:18
-#### Messages Table: 
-- 	SELECT * FROM messages;
--	1. I love Python!|1.0|tech|2025-02-08 23:36:18
--	2. This new recipe is amazing!|0.8|food|2025-02-08 23:36:18
-#### Joined Data (Users + Messages): 
--	SELECT users.name, messages.message, messages.sentiment
--	FROM users
-#### INNER JOIN messages ON users.id = messages.user_id;
--	Alice Johnson|I love Python!|1.0
--	Bob Smith|This new recipe is amazing!|0.8
 
 
 ## Contributors
